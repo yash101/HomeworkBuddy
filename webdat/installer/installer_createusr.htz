@@ -1,0 +1,63 @@
+<style type="text/css">
+#page_installer #HomePage
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 80%;
+	background-color: #C6C6C6;
+	border-radius: 16px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	color: #404040;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	font-family: Fantasy;
+
+	overflow-y: auto;
+}
+
+#page_installer h4
+{
+	color: #602571;
+}
+
+#page_installer input
+{
+	background-color: #C6C6C6;
+	color: #404040;
+	width: 100%;
+	height: 24px;
+	font-size: 18px;
+	border-radius: 16px;
+	border: 4px solid #98BF21;
+	padding: 4px;
+}
+
+#page_installer input:hover, #page_installer input:active
+{
+	background-color: #404040;
+	color: #C6C6C6;
+	border: 4px solid #1E628C;
+}
+</style>
+<div id="page_installer">
+	<div id="HomePage" class="bg_chromesteel">
+		<h1 class="CenteredText">Installation Wizard</h1>
+		<hr />
+		<h4>Installation Wizard > User Account Creation</h4>
+		<h3>Username</h3>
+		<input type="text" id="username" placeholder="username">
+		<h3>Password</h3>
+		<input type="text" id="password" placeholder="password">
+		<h3 id="year">Year: </h3>
+		<h2 class="ContinueButton" onclick="javascript:Installer.installUser();" id="ContinueToInstallation" style="display:none;">Create User!</h2>
+	</div>
+</div>

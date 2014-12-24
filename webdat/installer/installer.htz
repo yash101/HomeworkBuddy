@@ -1,0 +1,41 @@
+<style type="text/css">
+#page_installer_1 #HomePage
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 60%;
+	background-color: #C6C6C6;
+	border-radius: 16px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	color: #404040;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	font-family: Fantasy;
+
+	overflow-y: auto;
+}
+
+#page_installer_1 h4
+{
+	color: #602571;
+}
+</style>
+<div id="page_installer_1">
+	<div id="HomePage" class="bg_chromesteel">
+		<h1 class="CenteredText">Installation Wizard</h1>
+		<hr />
+		<h4>Installation Wizard > Main</h4>
+		<p>Welcome to HomeworkBuddy! We will now install HomeworkBuddy!</p>
+		<p>HomeworkBuddy is a learning management system designed to help you get focused while getting homework done. Are you the type of person who easily forgets to do an assignment? This system is designed to nag you until you get it all over with! Now, on with the installation... :)</p>
+		<h2 class="ContinueButton" onclick="javascript:Installer.loadPage2();">I'm In! Let's Continue!</h2>
+	</div>
+</div>

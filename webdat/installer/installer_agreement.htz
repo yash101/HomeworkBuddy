@@ -1,0 +1,58 @@
+<style type="text/css">
+#page_installer #HomePage
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 60%;
+	background-color: #C6C6C6;
+	border-radius: 16px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	color: #404040;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	font-family: Fantasy;
+
+	overflow-y: auto;
+}
+
+#page_installer h4
+{
+	color: #602571;
+}
+
+#page_installer #HomePage div
+{
+	font-family: Courier;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+</style>
+
+<div id="page_installer">
+	<div id="HomePage" class="bg_chromesteel">
+		<h1 class="CenteredText">Installation Wizard</h1>
+		<hr />
+		<h4>Installation Wizard > License Agreement</h4>
+		<p>In order to use this software, you must agree to the license agreement below!</p>
+		<div style="border: 2px solid #404040;">
+			<h3 class="CenteredText">License Agreement</h3>
+			<hr />
+			<h4 class="CenteredText">Licensing</h4>
+			<p>HomeworkBuddy is provided free of charge. It is open source, so you may feel free to use, modify, and deploy commercially, as long as your final product is distributed with the same terms and conditions.</p>
+			<h4 class="CenteredText">Warranty</h4>
+			<p>HomeworkBuddy is provided without a warranty. If you are not pleased with the capabilities of this software, you are free to add features and distribute your own version under the same terms and conditions as stated here.</p>
+			<h4 class="CenteredText">Liability</h4>
+			<p>You will be liable for your own actions. I will not be liable for any damages caused by this software. You install this software at your own risk.</p>
+		</div>
+		<h2 class="ContinueButton" onclick="javascript:Installer.loadPageCheckServer();">I agree with the licence agreement!</h2>
+	</div>
+</div>

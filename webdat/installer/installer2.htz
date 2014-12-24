@@ -1,0 +1,50 @@
+<style type="text/css">
+#page_installer_2 #HomePage
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 60%;
+	background-color: #C6C6C6;
+	border-radius: 16px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	color: #404040;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	font-family: Fantasy;
+
+	overflow-y: auto;
+}
+
+#page_installer_2 h4
+{
+	color: #602571;
+}
+</style>
+<div id="page_installer_2">
+	<div id="HomePage" class="bg_chromesteel">
+		<h1 class="CenteredText">Installation Wizard</h1>
+		<hr />
+		<h4>Installation Wizard > Todo List</h4>
+		<p>We will now begin the installation! We will...
+			<ol>
+				<li>License Agreement</li>
+				<li>Ensure your server meets the minimum requirements</li>
+				<li>Make you a user account</li>
+				<li>Set up your first year</li>
+				<li>Set up all of your classes</li>
+			</ol>
+		</p>
+		<h2>Database Stuff...</h2>
+		<p>Good News! This software uses the filesystem for the database. This way, you don't have to install a database software like MySQL!</p>
+		<h2 class="ContinueButton" onclick="javascript:Installer.loadPageLicenseAgreement();">Now, Let's Keep Going!</h2>
+	</div>
+</div>

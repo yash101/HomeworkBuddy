@@ -1,0 +1,51 @@
+<style type="text/css">
+#page_installer #HomePage
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 60%;
+	background-color: #C6C6C6;
+	border-radius: 16px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	color: #404040;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	font-family: Fantasy;
+
+	overflow-y: auto;
+}
+
+#page_installer h4
+{
+	color: #602571;
+}
+
+#page_installer #ConsoleOutput
+{
+	border: 2px solid #404040;
+	font-family: Courier;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+</style>
+<div id="page_installer">
+	<div id="HomePage" class="bg_chromesteel">
+		<h1 class="CenteredText">Installation Wizard</h1>
+		<hr />
+		<h4>Installation Wizard > Check for Server-Side Support</h4>
+		<h2 class="ContinueButton" onclick="javascript:Installer.performCheck();">Perform Check</h2>
+		<div id="ConsoleOutput">
+			<p id="DirectoryWriteTest"></p>
+		</div>
+		<h2 class="ContinueButton" onclick="javascript:Installer.loadPageCreateUser();" id="ContinueToInstallation" style="display:none;">Install!</h2>
+	</div>
+</div>
