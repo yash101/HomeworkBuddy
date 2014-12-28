@@ -10,6 +10,6 @@
 		<link rel="stylesheet" type="text/javascript" href="res/css/main.css" media="screen,print">
 	</head>
 	<body>
-		<div id="Body"></div>
+		<div id="Body"><h1 id="BootSplashloadingText" class="CenteredText">Please wait while HomeworkBuddy loads and initializes!</h1></div>
 	</body>
 </html>

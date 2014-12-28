@@ -1,18 +1,26 @@
-window.onload = function()
+$(function()
 {
-	Body.changeBody("webdat/installer/installer.htz", function()
+	DevAJAX.GET("backend/db_funcs.php?action=chkinst", function(x)
 	{
-		$.getScript("res/js/installer/main.js", function()
+		console.log("Recieved " + x + " from server!");
+		x = "0";
+		if(x.length < 1 || x == null || x == undefined) { return; }
+		if(parseInt(x) > 0)
 		{
-			Installer.load();
-		});
-	}, function(){});
-}
-
-function loadHome()
-{
-	Body.changeBody("webdat/index.htz", function(){}, function(){});	
-}
+			Body.changeBody("webdat/index.htz", function(){}, function(){});
+		}
+		else
+		{
+			Body.changeBody("webdat/installer/installer.htz", function()
+			{
+				$.getScript("res/js/installer/main.js", function()
+				{
+					Installer.load();
+				});
+			});
+		}
+	});
+});
 
 function loadStyle(location)
 {

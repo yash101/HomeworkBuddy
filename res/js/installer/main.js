@@ -1,20 +1,7 @@
 var Installer =
 {
 	load:function()
-	{
-		DevAJAX.GET("backend/db_funcs.php?action=chkinst", function(x)
-		{
-			console.log(x);
-			console.log(parseInt(x));
-			if(parseInt(x) > 0)
-			{
-				loadHome();
-			}
-			else
-			{
-			}
-		});
-	},
+	{},
 	loadPage2:function()
 	{
 		Body.changeBody("webdat/installer/installer2.htz", function(){}, function(){});
@@ -49,7 +36,8 @@ var Installer =
 		{
 			var tm = new Date();
 			var d = tm.getFullYear();
-			document.querySelectorAll("#page_installer #year")[0].innerHTML = "Year: " + d;
+			if(document.querySelectorAll("#page_installer #year")[0] != null)
+			{ document.querySelectorAll("#page_installer #year")[0].innerHTML = "Year: " + d; }
 		}, function(){});
 	},
 	installUser:function()
@@ -59,9 +47,31 @@ var Installer =
 		x = x + "&password=" + encodeURI(document.querySelectorAll("#page_installer #password")[0].value);
 		var d = new Date();
 		x = x + "&year=" + encodeURI(d.getFullYear());
-		x = x + "&action=addusr";
-		DevAJAX.POST("backend/db_write.php", x, function(ret)
+
+		if(document.querySelectorAll("#page_installer #Actions")[0] != null)
 		{
-		});
+			var out = document.querySelectorAll("#page_installer #Actions")[0];
+			//Create the user
+			DevAJAX.POST("backend/db_write.php?action=addusr", x, function(z)
+			{
+				//Check to make sure we aren't having mystery execution!
+				if(z != "" && z != null)
+				{
+					//Let the user know that the user has been created (or not)!
+					if(parseInt(z) == 1)
+						{ out.innerHTML += "<p>Added user successfully!</p>"; }
+					else if(parseInt(z) == 0)
+						{ out.innerHTML += "<p style=\"color:red;\">Unable to add user! Something's faulty!</p>"; }
+					else
+						{ out.innerHTML += "<p style=\"color:red\">Unable to interpret server response! Recieved: [" + z + "]!</p>"; }
+
+					//Create a new year!
+					DevAJAX.POST("backend/db_write.php?action=addyr", x, function(g)
+					{
+						//Let the user know that a new yearspace has been created!
+					});
+				}
+			});
+		}
 	}
 }
