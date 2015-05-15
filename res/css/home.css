@@ -1,0 +1,44 @@
+#sidebar
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 240px;
+	color: #404040;
+	overflow-y: auto;
+}
+
+#sidebar table
+{
+	max-width: 100%;
+}
+
+#sidebar div
+{
+	max-width: 232px;
+	padding: 2px;
+	border: 2px solid #1E628C;
+}
+
+#Body
+{
+	left: 240px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+#page_home #mainPane
+{
+	position: fixed;
+	left: 240px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+#page_home
+{
+	color: #C6C6C6;
+}

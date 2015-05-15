@@ -54,7 +54,7 @@ function createusr()
 	{
 		$f = fopen(".db/" . $uname . "/passwd", "w");
 		fwrite($f, $pw);
-		fclose($pw);
+		fclose($f);
 	}
 
 	//Update the userlist
@@ -111,9 +111,10 @@ function addclass($year, $classname)
 	//Authenticate!
 	if(!chkauthbg()) { return "1"; }
 	//To reduce redundancy. The location of the year directory
-	$yrdir = ".db/" . urlencode($_REQUEST["username"]) . "/" . (string) $year;
+	$yrdir = ".db/" . urlencode(trim($_REQUEST["username"])) . "/" . (string) $year;
 	//Check to make sure year exists!
 	if(!is_dir($yrdir)) { return "2"; }
+	if(is_dir($yrdir . "/" . urlencode($classname))) { return "3"; }
 	//Create the class directory
 	mkdir($yrdir . "/" . urlencode($classname));
 	//Create a class index for the year!

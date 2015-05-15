@@ -1,2 +1,9 @@
 <div id="page_index">
+	<link rel="stylesheet" type="text/css" href="res/css/index_page.css">
+	<h1 class="CenteredText">Welcome! Please Sign in to Begin!</h1>
+	<form id="signin-form">
+		<input type="text" id="username" class="field" placeholder="username">
+		<input type="password" id="password" class="field" placeholder="password">
+		<input type="submit" class="field" value="Log In!">
+	</form>
 </div>

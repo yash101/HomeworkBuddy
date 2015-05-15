@@ -1,0 +1,74 @@
+<style type="text/css">
+#page_installer #HomePage
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 80%;
+	background-color: #C6C6C6;
+	border-radius: 16px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	color: #404040;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	font-family: Fantasy;
+
+	overflow-y: auto;
+}
+
+#page_installer h4
+{
+	color: #602571;
+}
+
+#page_installer #Actions
+{
+	font-family: Courier;
+	border: 2px solid black;
+}
+
+#page_installer #maintbl
+{
+	width: 100%;
+	border: 2px solid black;
+}
+
+#page_installer .ClassNameInput
+{
+	width: 100%;
+	height: 100%;
+	border: 2px solid #1E628C;
+	width: 100%;
+	height: 24px;
+	padding: 0px;
+}
+</style>
+<div id="page_installer">
+	<div id="HomePage" class="bg_chromesteel">
+		<h1 class="CenteredText">Installation Wizard</h1>
+		<hr />
+		<h4>Installation Wizard > Class Additions</h4>
+		<h3>We will now add classes to your yearly schedule!</h3>
+		<table id="maintbl">
+			<tr>
+				<th>Class Name</th>
+			</tr>
+			<tr>
+<!-- 				<td><input type="text" class="ClassNameInput" placeholder="Class Name Here!"></td> -->
+			</tr>
+		</table>
+		<h2 class="ContinueButton" onclick="javascript:Installer.addClassField();">Add Another Class, Please!</h2>
+		<hr />
+		<h2 class="ContinueButton" id="ContinueToTest" onclick="javascript:Installer.installClasses();">Finalize the Installation!</h2>		
+		<div id="Actions2"></div>
+		<br />
+	</div>
+</div>

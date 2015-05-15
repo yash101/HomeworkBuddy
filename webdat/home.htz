@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" href="res/css/home.css">
+<div id="page_home">
+	<div id="mainPane">
+		<h1 class="CenteredText">Welcome to HomeworkBuddy Home!</h1>
+		<div id="classes"></div>
+	</div>
+</div>

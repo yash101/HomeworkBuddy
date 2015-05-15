@@ -29,7 +29,7 @@
 	color: #602571;
 }
 
-#page_installer input
+#page_installer .i
 {
 	background-color: #C6C6C6;
 	color: #404040;
@@ -41,7 +41,7 @@
 	padding: 4px;
 }
 
-#page_installer input:hover, #page_installer input:active
+#page_installer .i:hover, #page_installer .i:active
 {
 	background-color: #404040;
 	color: #C6C6C6;
@@ -60,11 +60,11 @@
 		<hr />
 		<h4>Installation Wizard > User Account Creation</h4>
 		<h3>Username</h3>
-		<input type="text" id="username" placeholder="username">
+		<input type="text" id="username" class="i" placeholder="username">
 		<h3>Password</h3>
-		<input type="text" id="password" placeholder="password">
+		<input type="text" id="password" class="i" placeholder="password">
 		<h3 id="year">Year: </h3>
-		<h2 class="ContinueButton" onclick="javascript:Installer.installUser();" id="ContinueToInstallation">Create User!</h2>
+		<h2 class="ContinueButton" onclick="javascript:Installer.installUser();" id="ContinueInstallation">Create User!</h2>
 		<div id="Actions"></div>
 		<br />
 	</div>
